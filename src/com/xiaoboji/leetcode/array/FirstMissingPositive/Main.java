@@ -19,7 +19,7 @@ public class Main {
     public static int[] testcase = new int[]{1,1};
 
     public static void main(String[] args) {
-        IFirstMissingPositive firstMissingPositive =  new MySolution();
+        IFirstMissingPositive firstMissingPositive =  new FirstGoodSolution();
         System.out.println(firstMissingPositive.firstMissingPositive(testcase));
     }
 
