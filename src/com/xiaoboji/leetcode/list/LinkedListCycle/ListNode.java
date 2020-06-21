@@ -1,4 +1,4 @@
-package com.xiaoboji.leetcode.array.LinkedListCycle;
+package com.xiaoboji.leetcode.list.LinkedListCycle;
 
 public class ListNode {
     int val;
