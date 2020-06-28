@@ -1,10 +1,11 @@
 package com.xiaoboji.leetcode.list.LinkedListCycle;
 
 public class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-      val = x;
-      next = null;
-    }
+  int val;
+  ListNode next;
+
+  ListNode(int x) {
+    val = x;
+    next = null;
+  }
 }
