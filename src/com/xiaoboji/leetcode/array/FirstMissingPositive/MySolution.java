@@ -1,42 +1,37 @@
 package com.xiaoboji.leetcode.array.FirstMissingPositive;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /** @author xiaoboji */
 public class MySolution implements IFirstMissingPositive {
 
   @Override
   public int firstMissingPositive(int[] nums) {
-    List list = new ArrayList();
-    recursive(nums, list);
-    return list.size() + 1;
+    Set<Integer> set = new HashSet<>();
+    return recursive(IntStream.of(nums).boxed().collect(Collectors.toList()).toArray(new Integer[0]),set) + 1;
   }
 
   /**
    * 递归实现
    *
    * @param nums 数组
-   * @param list 链表
    */
-  public void recursive(int[] nums, List list) {
-    list.clear();
+  public Integer recursive(Integer[] nums,Set<Integer> set) {
+    set.clear();
     int length = nums.length;
+    //遍历数组，如果数据中存在小于0，或者大于nums.length的数，则剔除
     for (int i = 0; i < length; i++) {
       if (!(nums[i] <= 0 || nums[i] > length)) {
-        if (!list.contains(nums[i])) {
-          list.add(nums[i]);
-        }
+        set.add(nums[i]);
       }
     }
 
-    if (!(list.size() == nums.length || list.size() == 0)) {
-      int[] array = new int[list.size()];
-      // 使用for循环得到数组
-      for (int i = 0; i < list.size(); i++) {
-        array[i] = (int) list.get(i);
-      }
-      recursive(array, list);
+    if (!(set.size() == nums.length || set.size() == 0)) {
+      recursive(set.toArray(new Integer[set.size()]), set);
     }
+    return  set.size();
   }
 }

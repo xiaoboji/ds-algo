@@ -8,10 +8,10 @@ package com.xiaoboji.leetcode.array.FirstMissingPositive;
  */
 public class Main {
 
-  public static int[] testcase = new int[] {-1, 1};
+  public static int[] testcase = new int[] {3,4,-1,1};
 
   public static void main(String[] args) {
-    IFirstMissingPositive firstMissingPositive = new FirstGoodSolution();
+    IFirstMissingPositive firstMissingPositive = new MySolution();
     System.out.println(firstMissingPositive.firstMissingPositive(testcase));
   }
 }
