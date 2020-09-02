@@ -1,12 +1,8 @@
-package com.xiaoboji.leetcode.array.ThreeSum;
+package array.ThreeSum;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import javafx.collections.transformation.SortedList;
 
 /**
  * @program: leetcode

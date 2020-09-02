@@ -1,4 +1,4 @@
-package com.xiaoboji.leetcode.array.ThreeSum;
+package array.ThreeSum;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import java.util.List;
  * @description: 三数之和
  * @author: xiaoboji
  * @create: 2020-06-29 23:02
- **/
+ */
 public interface IThreeSum {
-  
+
   /**
    * @param nums 入参
    * @return

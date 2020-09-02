@@ -1,4 +1,4 @@
-package com.xiaoboji.leetcode.array.FirstMissingPositive;
+package array.FirstMissingPositive;
 
 /**
  * title: 缺失的第一个正数 description:给你一个未排序的整数数组，请你找出其中没有出现的最小的正整数。 Example 1: Input: [1,2,0] Output: 3
@@ -8,7 +8,7 @@ package com.xiaoboji.leetcode.array.FirstMissingPositive;
  */
 public class Main {
 
-  public static int[] testcase = new int[] {3,4,-1,1};
+  public static int[] testcase = new int[] {3, 4, -1, 1};
 
   public static void main(String[] args) {
     IFirstMissingPositive firstMissingPositive = new MySolution();

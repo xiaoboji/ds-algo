@@ -1,4 +1,4 @@
-package com.xiaoboji.leetcode.list.LinkedListCycle;
+package list.LinkedListCycle;
 
 public class Main {
   /**

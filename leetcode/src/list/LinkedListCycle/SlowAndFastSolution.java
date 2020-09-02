@@ -1,4 +1,4 @@
-package com.xiaoboji.leetcode.list.LinkedListCycle;
+package list.LinkedListCycle;
 
 /** 快慢指针 */
 public class SlowAndFastSolution implements ILinkedListCycle {

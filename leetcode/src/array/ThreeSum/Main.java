@@ -1,11 +1,11 @@
-package com.xiaoboji.leetcode.array.ThreeSum;
+package array.ThreeSum;
 
 /**
  * @program: leetcode
  * @description: three sum
  * @author: xiaoboji
  * @create: 2020-06-29 22:58
- **/
+ */
 public class Main {
 
   /**

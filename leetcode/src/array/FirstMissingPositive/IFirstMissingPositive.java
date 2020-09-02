@@ -1,4 +1,4 @@
-package com.xiaoboji.leetcode.array.FirstMissingPositive;
+package array.FirstMissingPositive;
 
 /** @author JH */
 public interface IFirstMissingPositive {
