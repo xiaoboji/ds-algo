@@ -36,6 +36,12 @@ public class FixedArray {
     fixedArray.add(1);
     fixedArray.add(5);
     fixedArray.add(4);
+    fixedArray.add(5);
+    fixedArray.add(4);
+    fixedArray.add(5);
+    fixedArray.add(4);
+    fixedArray.add(5);
+    fixedArray.add(4);
     System.out.println(Arrays.toString(array));
     // 删除
     fixedArray.delete(2);
@@ -54,6 +60,7 @@ public class FixedArray {
   private void add(int value) {
     if (count == array.length) {
       System.out.println("超了!");
+      return;
     }
 
     if (count == 0 || value >= array[count - 1]) {
@@ -80,6 +87,7 @@ public class FixedArray {
   private void delete(int index) {
     if (count == 0 || index >= count) {
       System.out.println("删不动了!");
+      return;
     }
 
     back(index, count);
