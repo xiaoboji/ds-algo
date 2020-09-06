@@ -35,6 +35,7 @@ public class MergeSortedArray {
    */
   public static int[] merge(int[] a, int[] b) {
     int[] result = new int[a.length + b.length];
+    // 特殊条件判断a的最小数值都大于b的最大数值
     if (a[0] >= b[b.length - 1]) {
       for (int i = 0; i < b.length; i++) {
         result[i] = b[i];
@@ -44,6 +45,7 @@ public class MergeSortedArray {
       }
       return result;
     }
+    // 特殊条件判断b的最小数值都大于a的最大数值
     if (b[0] >= a[a.length - 1]) {
       for (int i = 0; i < a.length; i++) {
         result[i] = a[i];
@@ -54,6 +56,7 @@ public class MergeSortedArray {
       return result;
     }
 
+    // 循环拼接
     int idx_a = 0;
     int idx_b = 0;
     int idx_result = 0;
@@ -67,7 +70,7 @@ public class MergeSortedArray {
       }
       idx_result++;
     }
-
+    // 拼接剩余部分
     if (idx_a < a.length) {
       for (int i = idx_a; i < a.length; i++) {
         result[idx_result] = a[i];
