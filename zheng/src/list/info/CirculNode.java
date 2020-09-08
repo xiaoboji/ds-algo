@@ -1,4 +1,4 @@
-package list;
+package list.info;
 
 /**
  * @program: ds-algo

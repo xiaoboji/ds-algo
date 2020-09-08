@@ -1,5 +1,7 @@
 package list;
 
+import list.info.Node;
+
 /**
  * The type Single linked list.
  *

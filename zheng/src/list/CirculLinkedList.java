@@ -1,5 +1,7 @@
 package list;
 
+import list.info.CirculNode;
+
 /**
  * The type Circul linked list.
  *
