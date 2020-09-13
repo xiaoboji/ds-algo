@@ -23,8 +23,7 @@ public class ReverseSingleLinkedList {
     Node node2 = new Node(2, node3);
     Node head = new Node(1, node2);
     System.out.println(head);
-
-    reverse(head);
+    System.out.println(reverse(head));
   }
 
   /**
@@ -32,19 +31,20 @@ public class ReverseSingleLinkedList {
    *
    * @param head the head
    */
-  public static void reverse(Node head) {
-    if (head.next == null) {
-      return;
-    }
-    int first = 0;
-    int second = 0;
+  public static Node reverse(Node head) {
 
-    Node temp = head;
-    while (temp != null) {
-      temp = temp.next;
-      second++;
+    if (head.next == null) {
+      return head;
     }
-    System.out.println();
-    while (second - first <= 1) {}
+    Node first = null;
+    Node second = head;
+    Node temp = null;
+    while (second != null) {
+      temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    return first;
   }
 }
