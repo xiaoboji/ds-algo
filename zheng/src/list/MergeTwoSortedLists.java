@@ -1,4 +1,6 @@
-package list.MergeTwoSortedLists;
+package list;
+
+import list.info.ListNode;
 
 /**
  * @program: ds-algo
@@ -36,26 +38,5 @@ public class MergeTwoSortedLists {
     temp.next = l1 == null ? l2 : l1;
 
     return listNode.next;
-  }
-}
-
-class ListNode {
-  int val;
-  ListNode next;
-
-  ListNode() {}
-
-  ListNode(int val) {
-    this.val = val;
-  }
-
-  ListNode(int val, ListNode next) {
-    this.val = val;
-    this.next = next;
-  }
-
-  @Override
-  public String toString() {
-    return "ListNode{" + "val=" + val + ", next=" + next + '}';
   }
 }
