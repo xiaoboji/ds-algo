@@ -1,5 +1,7 @@
 package list;
 
+import list.info.ListNode;
+
 /**
  * @program: ds-algo
  * @description: 实现求链表的中间结点
