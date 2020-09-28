@@ -26,6 +26,14 @@ public class MergeSort {
     merge(array, start, mid, end);
   }
 
+  /**
+   * 自己的解法
+   *
+   * @param array
+   * @param start
+   * @param mid
+   * @param end
+   */
   public static void merge(int[] array, int start, int mid, int end) {
     // 申请一个新的大小一样的空间
     int[] temp = new int[end - start + 1];
@@ -61,6 +69,14 @@ public class MergeSort {
     }
   }
 
+  /**
+   * 争的解法
+   *
+   * @param a
+   * @param p
+   * @param q
+   * @param r
+   */
   private static void mergeByzheng(int[] a, int p, int q, int r) {
     int i = p;
     int j = q + 1;
@@ -68,6 +84,7 @@ public class MergeSort {
     int k = 0;
     // 申请一个大小跟a[p...r]一样的临时数组
     int[] tmp = new int[r - p + 1];
+    // while条件一定要注意
     while (i <= q && j <= r) {
       if (a[i] <= a[j]) {
         // i++等于i:=i+1
@@ -93,6 +110,43 @@ public class MergeSort {
     // 将tmp中的数组拷贝回a[p...r]
     for (i = 0; i <= r - p; ++i) {
       a[p + i] = tmp[i];
+    }
+  }
+
+  /**
+   * 合并(哨兵)
+   *
+   * @param arr
+   * @param p
+   * @param q
+   * @param r
+   */
+  private static void mergeBySentry(int[] arr, int p, int q, int r) {
+    int[] leftArr = new int[q - p + 2];
+    int[] rightArr = new int[r - q + 1];
+
+    for (int i = 0; i <= q - p; i++) {
+      leftArr[i] = arr[p + i];
+    }
+    // 第一个数组添加哨兵（最大值）
+    leftArr[q - p + 1] = Integer.MAX_VALUE;
+
+    for (int i = 0; i < r - q; i++) {
+      rightArr[i] = arr[q + 1 + i];
+    }
+    // 第二个数组添加哨兵（最大值）
+    rightArr[r - q] = Integer.MAX_VALUE;
+
+    int i = 0;
+    int j = 0;
+    int k = p;
+    while (k <= r) {
+      // 当左边数组到达哨兵值时，i不再增加，直到右边数组读取完剩余值，同理右边数组也一样
+      if (leftArr[i] <= rightArr[j]) {
+        arr[k++] = leftArr[i++];
+      } else {
+        arr[k++] = rightArr[j++];
+      }
     }
   }
 }
