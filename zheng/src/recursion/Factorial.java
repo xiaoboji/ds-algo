@@ -20,6 +20,7 @@ public class Factorial {
     if (result.containsKey(n)) {
       return result.get(n);
     }
+
     Long l = solution(n - 1) * n;
     result.put(n, l);
     return l;
