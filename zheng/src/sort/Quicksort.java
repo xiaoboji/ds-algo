@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @author xiaoboji
  */
 public class Quicksort {
+
   public static void main(String[] args) {
     int[] array = {6, 2, 1, 3, 5, 4};
     solution(array, 0, array.length - 1);
