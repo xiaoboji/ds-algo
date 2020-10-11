@@ -8,6 +8,7 @@ import java.util.Arrays;
  * @author HP
  */
 public class MergeSort {
+
   public static void main(String[] args) {
     int[] array = {6, 2, 1, 3, 5, 4, 8, 7};
     int start = 0;
