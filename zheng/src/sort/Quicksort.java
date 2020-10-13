@@ -15,34 +15,34 @@ public class Quicksort {
     System.out.println(Arrays.toString(array));
   }
 
-  public static void solution(int[] array, int start, int end) {
-    System.out.println("start:" + Arrays.toString(array) + " start:" + start + " end:" + end);
-    if (start >= end) {
+  public static void solution(int[] s, int l, int r) {
+    System.out.println("start:" + Arrays.toString(s) + " start:" + l + " end:" + r);
+    if (l >= r) {
       return;
     }
 
-    int temp = array[end];
-    int i = start;
-    int j = end;
+    // Swap(s[l], s[(l + r) / 2]); //将中间的这个数和第一个数交换 参见注1
+    int i = l, j = r, x = s[l];
     while (i < j) {
-      while (array[i] < temp && i < j) {
-        i++;
-      }
-      while (array[j] >= temp && i < j) {
+      // 从右向左找第一个小于x的数
+      while (i < j && s[j] >= x) {
         j--;
       }
       if (i < j) {
-        swap(array, i, j);
+        s[i++] = s[j];
+      }
+      // 从左向右找第一个大于等于x的数
+      while (i < j && s[i] < x) {
         i++;
-        j--;
+      }
+      if (i < j) {
+        s[j--] = s[i];
       }
     }
-    array[end] = array[i + 1];
-    array[i + 1] = temp;
-    System.out.println("end:" + Arrays.toString(array));
-
-    solution(array, start, i - 1);
-    solution(array, i + 1, end);
+    s[i] = x;
+    // 递归调用
+    solution(s, l, i - 1);
+    solution(s, i + 1, r);
   }
 
   /**
