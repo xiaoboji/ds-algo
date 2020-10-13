@@ -3,11 +3,11 @@ package sort;
 import java.util.Arrays;
 
 /**
- * 快速排序
+ * 快速排序-填坑法
  *
  * @author xiaoboji
  */
-public class Quicksort {
+public class QuickSort {
 
   public static void main(String[] args) {
     int[] array = {6, 2, 1, 3, 5, 4};
