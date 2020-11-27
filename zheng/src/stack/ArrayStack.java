@@ -32,6 +32,7 @@ public class ArrayStack {
    * @param args the input arguments
    */
   public static void main(String[] args) {
+
     ArrayStack arrayStack = new ArrayStack(5);
     arrayStack.push("1");
     arrayStack.push("2");
