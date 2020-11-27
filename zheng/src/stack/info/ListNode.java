@@ -7,6 +7,7 @@ package stack.info;
  * @create: 2020-09-19 22:24
  */
 public class ListNode {
+
   public String value;
 
   public ListNode next;
